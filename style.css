@@ -1,0 +1,149 @@
+/* Variables */
+* {
+  --circle-size: min(45vw, 30vh);
+  --circle-round: min(3vw, 1vh);
+  --text-padding-width: min(12rem, 4vh);
+  --text-padding-height: min(5rem, 10vh);
+}
+
+/* Minimum full height website */
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+h1 {
+  padding: 2rem;
+  margin: 0;
+
+  font-size: min(10vw, 3rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+#circle_cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 0.5rem;
+
+  height: 100%;
+}
+
+.common_cont {
+  position: relative;
+}
+
+.circle_item {
+  height: var(--circle-size);
+  width: var(--circle-size);
+  display: block;
+
+  background: #00000050;
+
+  position: absolute;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#circle_item_a,
+#circle_item_a > .arrow {
+  right: 0;
+  bottom: 0;
+  border-radius: var(--circle-size) var(--circle-round) var(--circle-round)
+    var(--circle-round);
+  background-color: #fbbf24;
+}
+#circle_item_a > .arrow {
+  transform: rotate(-90deg);
+}
+
+#circle_item_b,
+#circle_item_b > .arrow {
+  left: 0;
+  bottom: 0;
+  border-radius: var(--circle-round) var(--circle-size) var(--circle-round)
+    var(--circle-round);
+  background-color: #60a5fa;
+}
+
+#circle_item_c,
+#circle_item_c > .arrow {
+  right: 0;
+  top: 0;
+  border-radius: var(--circle-round) var(--circle-round) var(--circle-round)
+    var(--circle-size);
+  background-color: #fb7185;
+}
+#circle_item_c > .arrow {
+  transform: rotate(180deg);
+}
+
+#circle_item_d,
+#circle_item_d > .arrow {
+  left: 0;
+  top: 0;
+  border-radius: var(--circle-round) var(--circle-round) var(--circle-size)
+    var(--circle-round);
+  background-color: #4ade80;
+}
+#circle_item_d > .arrow {
+  transform: rotate(90deg);
+}
+
+.arrow {
+  background-color: transparent !important;
+  position: absolute;
+}
+
+.text_cont {
+  position: absolute;
+  height: calc(var(--circle-size) * 0.8);
+  width: calc(var(--circle-size) * 1.8);
+  padding: 1rem 2rem;
+  border-radius: var(--circle-round);
+  text-align: left;
+  font-weight: 700;
+}
+
+#text_cont_b {
+  top: calc(var(--circle-size) / 3);
+  left: calc(var(--circle-size) / 2);
+  background-color: #60a5fa50;
+}
+
+.circle_item > h3 {
+  z-index: 20;
+  color: #fff;
+  font-size: min(6vw, 2rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+#circle_item_a > h3 {
+  padding: var(--text-padding-height) 0 0 var(--text-padding-width);
+}
+#circle_item_b > h3 {
+  padding: var(--text-padding-height) var(--text-padding-width) 0 0;
+}
+#circle_item_c > h3 {
+  padding: 0 0 var(--text-padding-height) var(--text-padding-width);
+}
+#circle_item_d > h3 {
+  padding: 0 var(--text-padding-width) var(--text-padding-height) 0;
+}
