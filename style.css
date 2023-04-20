@@ -1,5 +1,7 @@
 /* Variables */
 * {
+  scroll-behavior: smooth;
+
   --circle-size: min(40vw, 18rem);
   --arrow-size: min(44vw, 20rem);
   --outer-circle-size: min(45vw, 21rem);
@@ -68,6 +70,8 @@ h1 {
 
   position: absolute;
   z-index: 10;
+
+  text-decoration: none;
 
   display: flex;
   justify-content: center;
@@ -158,10 +162,10 @@ h1 {
   padding-bottom: calc(var(--circle-size) / 3);
   padding-right: calc(var(--circle-size) / 2);
 }
-#text_cont_a {
+#text_cont_a, #text_cont_a_mob {
   background-color: #fbbf2450;
 }
-#text_cont_a:not(.outside_circle)::before {
+#text_cont_a::before {
   content: "";
   float: right;
   width: 100%;
@@ -175,10 +179,10 @@ h1 {
   padding-bottom: calc(var(--circle-size) / 3);
   padding-left: calc(var(--circle-size) / 2);
 }
-#text_cont_b {
+#text_cont_b, #text_cont_b_mob {
   background-color: #60a5fa50;
 }
-#text_cont_b:not(.outside_circle)::before {
+#text_cont_b::before {
   content: "";
   float: left;
   width: 100%;
@@ -192,10 +196,10 @@ h1 {
   padding-top: calc(var(--circle-size) / 3);
   padding-right: calc(var(--circle-size) / 2);
 }
-#text_cont_c {
+#text_cont_c, #text_cont_c_mob {
   background-color: #fb718550;
 }
-#text_cont_c:not(.outside_circle)::before {
+#text_cont_c::before {
   content: "";
   float: right;
   width: 100%;
@@ -209,10 +213,10 @@ h1 {
   padding-top: calc(var(--circle-size) / 3);
   padding-left: calc(var(--circle-size) / 2);
 }
-#text_cont_d {
+#text_cont_d, #text_cont_d_mob {
   background-color: #4ade8050;
 }
-#text_cont_d:not(.outside_circle)::before {
+#text_cont_d::before {
   content: "";
   float: left;
   height: 100%;
